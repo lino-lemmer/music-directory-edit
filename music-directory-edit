@@ -1,1 +1,7 @@
 #!/bin/bash
+
+for directory in */
+do
+    dir_array=($directory)
+    echo ${dir_array[0]}
+done
