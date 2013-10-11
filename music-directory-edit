@@ -19,8 +19,8 @@ do
                i=($i+1)
             fi
         done
-        echo ${dir_array[*]}
-#        new_dir="${dir_array[*]}"
+        new_dir="${dir_array[*]}"
+        echo "$new_dir"
 #        mv -- "$directory" "$new_dir"
     fi
 done
