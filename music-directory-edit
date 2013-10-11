@@ -10,7 +10,7 @@ do
         i=2
         while true
         do
-            if (( dir_array[i] != - ))
+            if (( dir_array[i] != "-" ))
             then
                 dir_array[($i-1)]="${dir_array[$i]}"
                 i=($i+1)
