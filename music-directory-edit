@@ -20,7 +20,6 @@ do
             fi
         done
         new_dir="${dir_array[*]}"
-        echo "$new_dir"
-#        mv -- "$directory" "$new_dir"
+        mv -- "$directory" "$new_dir"
     fi
 done
