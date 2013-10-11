@@ -5,7 +5,7 @@ do
     dir_array=($directory)
     if [ ${dir_array[0]}=="The" ] || [ ${dir_array[0]}=="Die" ]
     then
-    echo ${dir_array[*]}
+    echo ${dir_array[1]}
 #        article=${dir_array[1]}
 #        i=2
 #        while true
