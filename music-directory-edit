@@ -11,7 +11,7 @@ do
         do
             if  [ "${dir_array[$i]}" == "-" ]
             then
-                dir_array[($i-2)]="${dir_array[($i-1)]}""\,"
+                dir_array[($i-2)]="${dir_array[($i-1)]}"","
                 dir_array[($i-1)]="$article"
                 break
             else
