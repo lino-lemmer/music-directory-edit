@@ -1,12 +1,16 @@
 #!/bin/bash
 
+count=0
+
 for directory in */
 do
     dir_array=($directory)
+
     if [ "${dir_array[0]}" == "The" ] || [ "${dir_array[0]}" == "Die" ]
     then
         article=${dir_array[0]}
         i=1
+
         while true
         do
             if  [ "${dir_array[$i]}" == "-" ]
@@ -19,7 +23,13 @@ do
                i=($i+1)
             fi
         done
+        
         new_dir="${dir_array[*]}"
         mv -- "$directory" "$new_dir"
+
+        echo "Renamed $directory into $new_dir."
+
+        count=$(($count+1))
     fi
 done
+echo "$count directories have been renamed."
