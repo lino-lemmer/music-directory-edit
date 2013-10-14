@@ -2,9 +2,16 @@
 
 count=0
 
+# Go through all directories in current directory
+
 for directory in */
 do
+
+# Split directory-name by spaces into array
+
     dir_array=($directory)
+
+# Choose only those, beginning with "The" or "Die"
 
     if [ "${dir_array[0]}" == "The" ] || [ "${dir_array[0]}" == "Die" ]
     then
@@ -32,4 +39,5 @@ do
         count=$(($count+1))
     fi
 done
+
 echo "$count directories have been renamed."
